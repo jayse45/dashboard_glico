@@ -2,7 +2,7 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { Button, Img, Input, Line, SelectBox, Text } from "components";
+import { Button, Img, Input, Line, Navbar, SelectBox, Text } from "components";
 
 const salutationFirstNameLastNameOptionsList = [
   { label: "Option1", value: "option1" },
@@ -20,14 +20,13 @@ const PoliciesOnePage = () => {
 
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-montserrat items-center justify-start mx-auto pb-[167px] w-full">
+       <div className="bg-gray-100 flex flex-row gap-0 font-montserrat items-start justify-start pb-9 w-full">
+        <div className="flex items-start justify-end md:mt-0 pt-10 min-w-[400px] h-screen flex-1 mr-0 pr-0">
+          <Navbar path="Settings" />
+        </div>
+        <div className="flex flex-col gap-[31px] items-start justify-start w-full ml-0 pl-0">
         <div className="flex flex-col items-start justify-start w-full">
           <div className="bg-white-A700 flex flex-col gap-7 items-start justify-start max-w-[1440px] p-8 sm:px-5 w-full">
-            <Img
-              className="h-[18px] md:h-auto object-cover w-[180px] sm:w-full"
-              src="images/img_glicohealthcarelogo300x301.png"
-              alt="glicohealthcare"
-            />
             <div className="flex flex-col gap-[13px] items-start justify-start max-w-[1376px] mx-auto md:px-5 w-full">
               <Text
                 className="sm:text-2xl md:text-[26px] text-[28px] text-indigo-800 w-full"
@@ -43,71 +42,7 @@ const PoliciesOnePage = () => {
               </Text>
             </div>
           </div>
-          <div className="bg-white-A700 flex flex-col items-start justify-start outline outline-[1px] outline-gray-300 sm:px-5 px-8 py-3 w-auto md:w-full">
-            <div className="flex flex-col items-center justify-start max-w-[1376px] mx-auto md:px-5 w-full">
-              <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between max-w-[1376px] w-full">
-                <div className="flex sm:flex-1 sm:flex-col flex-row sm:gap-5 items-start justify-start w-auto sm:w-full">
-                  <Button
-                    className="common-pointer cursor-pointer font-semibold min-w-[101px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                    onClick={() => navigate("/desktopfifteen")}
-                    shape="round"
-                    size="lg"
-                  >
-                    Overview
-                  </Button>
-                  <Button
-                    className="cursor-pointer font-semibold min-w-[112px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                    shape="round"
-                    size="lg"
-                  >
-                    Customers
-                  </Button>
-                  <Button
-                    className="common-pointer cursor-pointer font-semibold min-w-[128px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                    onClick={() => navigate("/transactions")}
-                    shape="round"
-                    size="lg"
-                  >
-                    Transactions
-                  </Button>
-                  <Button
-                    className="common-pointer cursor-pointer font-semibold min-w-[87px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                    onClick={() => navigate("/policiestwo")}
-                    shape="round"
-                    size="lg"
-                  >
-                    Policies
-                  </Button>
-                  <Button
-                    className="cursor-pointer font-semibold min-w-[92px] text-[15px] text-center tracking-[0.50px]"
-                    shape="round"
-                    color="indigo_800"
-                    size="lg"
-                    variant="fill"
-                  >
-                    Settings
-                  </Button>
-                </div>
-                <div className="flex sm:flex-1 sm:flex-col flex-row gap-4 items-start justify-start w-auto sm:w-full">
-                  <Input
-                    name="frame361"
-                    placeholder="Search..."
-                    className="font-semibold p-0 placeholder:text-blue_gray-300 text-[15px] text-left tracking-[0.50px] w-full"
-                    wrapClassName="rounded-lg w-[85%] sm:w-full"
-                    color="gray_300"
-                    size="xs"
-                    variant="outline"
-                  ></Input>
-                  <Img
-                    className="h-11 md:h-auto rounded-[50%] w-11"
-                    src="images/img_image.png"
-                    alt="image_One"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex md:flex-col flex-row gap-[39px] items-start justify-start ml-8 md:ml-[0] mt-10 md:px-5 w-[64%] md:w-full">
+          <div className="flex md:flex-col flex-row gap-[39px] items-start justify-start ml-8 md:ml-[0] mt-10 md:px-5 w-full md:w-full">
             <div className="flex flex-col items-start justify-start w-[221px]">
               <div className="flex flex-col items-center justify-start p-3 rounded-lg w-full">
                 <Text
@@ -159,14 +94,14 @@ const PoliciesOnePage = () => {
               </div>
             </div>
             <div className="flex flex-col items-start justify-start md:mt-0 mt-1 w-[72%] md:w-full">
-              <div className="flex sm:flex-col flex-row font-inter gap-[17px] items-start justify-start w-[73%] md:w-full">
+              <div className="flex sm:flex-col flex-row font-inter gap-[17px] items-start justify-start w-full md:w-full">
                 <Text
                   className="bg-blue-50 flex h-16 items-center justify-center mb-[15px] outline outline-[1px] outline-white-A700 rounded-[50%] text-center text-gray-900 text-xl tracking-[-0.40px] w-16"
                   size="txtInterSemiBold20"
                 >
                   GH
                 </Text>
-                <div className="flex flex-col font-montserrat items-start justify-start w-[84%] sm:w-full">
+                <div className="flex flex-col font-montserrat items-start justify-start w-full sm:w-full">
                   <div className="flex flex-row gap-2 items-center justify-start w-auto">
                     <Text
                       className="text-[15px] text-blue_gray-700 w-auto"
@@ -361,6 +296,7 @@ const PoliciesOnePage = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

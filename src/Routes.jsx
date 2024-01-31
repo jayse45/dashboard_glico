@@ -51,21 +51,21 @@ const ProjectRoutes = () => {
             element={<ProtectedRoute element={Customers} />}
           />
           <Route
-            path="/policiestwo"
+            path="/policies"
             element={<ProtectedRoute element={PoliciesTwo} />}
           />
           <Route
-            path="/policiesone"
+            path="/settings"
             element={<ProtectedRoute element={PoliciesOne} />}
           />
           <Route
             path="/policiesthree"
             element={<ProtectedRoute element={PoliciesThree} />}
           />
-          <Route
+          {/* <Route
             path="/policies"
             element={<ProtectedRoute element={Policies} />}
-          />
+          /> */}
           <Route
             path="/transactionsindex"
             element={<ProtectedRoute element={Transactionsindex} />}

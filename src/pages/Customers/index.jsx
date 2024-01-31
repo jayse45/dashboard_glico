@@ -10,6 +10,7 @@ import {
   Img,
   Input,
   List,
+  Navbar,
   ReactTable,
   SelectBox,
   Text,
@@ -287,13 +288,12 @@ const CustomersPage = () => {
 
   return (
     <>
-      <div className="bg-gray-100 flex flex-col font-montserrat items-center justify-start mx-auto pb-[74px] w-full">
+      <div className="bg-gray-100 flex flex-row gap-0 font-montserrat items-start justify-start pb-9 w-full">
+        <div className="flex items-start justify-end md:mt-0 pt-10 min-w-[400px] h-screen flex-1 mr-0 pr-0">
+          <Navbar path="Customers"/>
+        </div>
+        <div className="flex flex-col gap-[31px] items-start justify-start w-full ml-0 pl-0">
         <div className="bg-white-A700 flex flex-col gap-7 items-start justify-start max-w-[1440px] p-8 sm:px-5 w-full">
-          <Img
-            className="h-[18px] md:h-auto object-cover w-[180px] sm:w-full"
-            src="images/img_glicohealthcarelogo300x301.png"
-            alt="glicohealthcare"
-          />
           <div className="flex flex-col gap-[13px] items-start justify-start max-w-[1376px] mx-auto md:px-5 w-full">
             <Text
               className="sm:text-2xl md:text-[26px] text-[28px] text-indigo-800 w-full"
@@ -309,73 +309,8 @@ const CustomersPage = () => {
             </Text>
           </div>
         </div>
-        <div className="bg-white-A700 flex flex-col items-start justify-start outline outline-[1px] outline-gray-300 sm:px-5 px-8 py-3 w-auto md:w-full">
-          <div className="flex flex-col items-center justify-start max-w-[1376px] mx-auto md:px-5 w-full">
-            <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between max-w-[1376px] w-full">
-              <div className="flex sm:flex-1 sm:flex-col flex-row sm:gap-5 items-start justify-start w-auto sm:w-full">
-                <Button
-                  className="common-pointer cursor-pointer font-semibold min-w-[101px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                  onClick={() => navigate("/desktopfifteen")}
-                  shape="round"
-                  size="lg"
-                >
-                  Overview
-                </Button>
-                <Button
-                  className="cursor-pointer font-semibold min-w-[112px] text-[15px] text-center tracking-[0.50px]"
-                  shape="round"
-                  color="indigo_800"
-                  size="lg"
-                  variant="fill"
-                >
-                  Customers
-                </Button>
-                <Button
-                  className="common-pointer cursor-pointer font-semibold min-w-[128px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                  onClick={() => navigate("/transactions")}
-                  shape="round"
-                  size="lg"
-                >
-                  Transactions
-                </Button>
-                <Button
-                  className="common-pointer cursor-pointer font-semibold min-w-[87px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                  onClick={() => navigate("/policiestwo")}
-                  shape="round"
-                  size="lg"
-                >
-                  Policies
-                </Button>
-                <Button
-                  className="common-pointer cursor-pointer font-semibold min-w-[92px] text-[15px] text-blue_gray-300 text-center tracking-[0.50px]"
-                  onClick={() => navigate("/policiesone")}
-                  shape="round"
-                  size="lg"
-                >
-                  Settings
-                </Button>
-              </div>
-              <div className="flex sm:flex-1 sm:flex-col flex-row gap-4 items-start justify-start w-auto sm:w-full">
-                <Input
-                  name="frame361"
-                  placeholder="Search..."
-                  className="font-semibold p-0 placeholder:text-blue_gray-300 text-[15px] text-left tracking-[0.50px] w-full"
-                  wrapClassName="rounded-lg w-[85%] sm:w-full"
-                  color="gray_300"
-                  size="xs"
-                  variant="outline"
-                ></Input>
-                <Img
-                  className="h-11 md:h-auto rounded-[50%] w-11"
-                  src="images/img_image.png"
-                  alt="image_One"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
         <List
-          className="sm:flex-col flex-row gap-4 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-start max-w-[1373px] mt-4 mx-auto md:px-5 w-full"
+          className="sm:flex-col flex-row gap-4 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-start max-w-[1450px] mt-4 md:px-5 w-full"
           orientation="horizontal"
         >
           <div className="bg-white-A700 border border-gray-300 border-solid flex flex-1 flex-col h-full items-start justify-between rounded-[12px] w-full">
@@ -574,7 +509,7 @@ const CustomersPage = () => {
             </div>
           </div>
         </List>
-        <div className="bg-white-A700 border border-gray-300 border-solid flex flex-col items-start justify-start max-w-[1373px] mt-3 mx-auto p-3 md:px-5 rounded-[12px] w-full">
+        <div className="bg-white-A700 border border-gray-300 border-solid flex flex-col items-start justify-start max-w-[1450px] mt-3 p-3 md:px-5 rounded-[12px] w-full">
           <div className="flex flex-col gap-6 items-center justify-start w-full">
             <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-full">
               <Input
@@ -714,6 +649,7 @@ const CustomersPage = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

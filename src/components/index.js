@@ -8,3 +8,4 @@ export { ProtectedRoute } from "./ProtectedRoute";
 export { SelectBox } from "./SelectBox";
 export { ReactTable } from "./Table";
 export { Text } from "./Text";
+export { Navbar } from "./Navbar";
