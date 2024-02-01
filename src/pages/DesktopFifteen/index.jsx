@@ -252,7 +252,7 @@ const DesktopFifteenPage = () => {
               orientation="horizontal"
             >
               <div
-                className="common-pointer bg-white-A700 border border-gray-300 border-solid flex flex-1 flex-col gap-11 h-full items-start justify-between rounded-[12px] w-full"
+                className="common-pointer bg-white-A700 border border-gray-300 border-solid flex flex-1 flex-col h-full items-start justify-start rounded-[12px] w-full"
                 onClick={() => navigate("/customers")}
               >
                 <div className="border-b border-blue_gray-50 border-solid flex flex-row gap-[7px] items-center justify-start p-3 w-full">
@@ -262,22 +262,15 @@ const DesktopFifteenPage = () => {
                   >
                     Customers
                   </Text>
-                  <div className="flex flex-col h-5 items-center justify-start w-5">
-                    <Img
-                      className="h-5 w-5"
-                      src="images/img_play.svg"
-                      alt="play"
-                    />
-                  </div>
                 </div>
-                <div className="flex flex-col gap-3 h-[95px] md:h-auto items-start justify-center p-3 w-full">
+                <div className="flex flex-col gap-3 md:h-auto items-start justify-between p-3 h-full w-full">
                   <Text
                     className="md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-900 tracking-[0.50px] uppercase w-auto"
                     size="txtMontserratBold32"
                   >
                     5000
                   </Text>
-                  <div className="flex flex-row items-start justify-between w-full">
+                  <div className="flex flex-row items-end justify-between h-full w-full">
                     <Text
                       className="text-blue_gray-400 text-sm tracking-[0.50px] w-auto"
                       size="txtMontserratMedium14"
@@ -305,7 +298,7 @@ const DesktopFifteenPage = () => {
                 </div>
               </div>
               <div
-                className="common-pointer bg-white-A700 border border-gray-300 border-solid flex flex-1 flex-col gap-11 h-full items-start justify-between rounded-[12px] w-full"
+                className="common-pointer bg-white-A700 border border-gray-300 border-solid flex flex-1 flex-col h-full items-start justify-start rounded-[12px] w-full"
                 onClick={() => navigate("/transactions")}
               >
                 <div className="border-b border-blue_gray-50 border-solid flex flex-row gap-[7px] items-center justify-start p-3 w-full">
@@ -315,15 +308,8 @@ const DesktopFifteenPage = () => {
                   >
                     Transactions
                   </Text>
-                  <div className="flex flex-col h-5 items-center justify-start w-5">
-                    <Img
-                      className="h-5 w-5"
-                      src="images/img_play.svg"
-                      alt="play"
-                    />
-                  </div>
                 </div>
-                <div className="flex flex-col gap-3 h-[95px] md:h-auto items-start justify-center p-3 w-full">
+                <div className="flex flex-col gap-3 md:h-auto items-start justify-between p-3 h-full w-full">
                   <div className="flex flex-col items-end justify-start w-full">
                     <div className="flex flex-row gap-1 items-center justify-start w-full">
                       <Text
@@ -367,7 +353,7 @@ const DesktopFifteenPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-white-A700 border border-gray-300 border-solid flex flex-1 flex-col gap-11 h-full items-start justify-between rounded-[12px] w-full">
+              <div className="bg-white-A700 border border-gray-300 border-solid flex flex-1 flex-col h-full items-start justify-start rounded-[12px] w-full">
                 <div className="border-b border-blue_gray-50 border-solid flex flex-row gap-[7px] items-center justify-start p-3 w-full">
                   <Text
                     className="flex-1 text-[15px] text-blue_gray-400 tracking-[0.50px] w-auto"
@@ -375,15 +361,8 @@ const DesktopFifteenPage = () => {
                   >
                     Pending Approvals
                   </Text>
-                  <div className="flex flex-col h-5 items-center justify-start w-5">
-                    <Img
-                      className="h-5 w-5"
-                      src="images/img_play.svg"
-                      alt="play"
-                    />
-                  </div>
                 </div>
-                <div className="flex flex-col gap-3 h-[95px] md:h-auto items-start justify-center p-3 w-full">
+                <div className="flex flex-col gap-3 md:h-auto items-start justify-between h-full p-3 w-full">
                   <Text
                     className="md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-900 tracking-[0.50px] uppercase w-auto"
                     size="txtMontserratBold32"
@@ -428,13 +407,6 @@ const DesktopFifteenPage = () => {
                   >
                     Policies
                   </Text>
-                  <div className="flex flex-col h-5 items-center justify-start w-5">
-                    <Img
-                      className="h-5 w-5"
-                      src="images/img_play.svg"
-                      alt="play"
-                    />
-                  </div>
                 </div>
                 <div className="flex flex-col gap-3 items-start justify-start p-3 w-full">
                   <Text
@@ -710,15 +682,12 @@ const DesktopFifteenPage = () => {
                       </div>
                       <div
                         className="absolute bg-cover bg-no-repeat flex flex-col h-full inset-[0] items-center justify-center m-auto pt-[83px] w-[96%]"
-                        style={{
-                          backgroundImage: "url('images/img_group763.svg')",
-                        }}
                       >
                         <Img
-                          className="h-[169px] w-[608px]"
-                          src="images/img_customers.svg"
-                          alt="customers_One"
-                        />
+                  className="h-[281px] w-full"
+                  src="images/img_frame520.svg"
+                  alt="frame520"
+                />
                       </div>
                     </div>
                     <div className="flex flex-row sm:gap-[50px] h-7 md:h-auto items-center justify-between mb-[7px] w-[608px] md:w-full">

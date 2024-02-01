@@ -5,7 +5,7 @@ import { ErrorMessage } from "../../components/ErrorMessage";
 const variants = {
   outline: { blue_gray_100_01: "border border-blue_gray-100_01 border-solid" },
 };
-const shapes = { square: "rounded-none", round: "rounded" };
+const shapes = { square: "rounded-none", round: "rounded-lg" };
 const sizes = { xs: "pb-px" };
 
 const CheckBox = React.forwardRef(

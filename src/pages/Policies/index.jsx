@@ -19,7 +19,7 @@ const PoliciesPage = () => {
             />
             <div className="flex flex-col gap-[13px] items-start justify-start max-w-[1376px] mx-auto md:px-5 w-full">
               <Text
-                className="sm:text-2xl md:text-[26px] text-[28px] text-indigo-800 w-full"
+                className="sm:text-2xl md:text-[26px] text-[28px] text-indigo-800 w-full uppercase"
                 size="txtMontserratBold28"
               >
                 GLICO Sunkwa Health Plan

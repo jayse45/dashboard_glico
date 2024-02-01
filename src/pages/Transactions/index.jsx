@@ -104,7 +104,7 @@ const TransactionsPage = () => {
               inputClassName="mr-[5px]"
               name="settings_Two"
               id="settings_Two"
-              shape="square"
+              shape="round"
             ></CheckBox>
           </div>
         ),
@@ -115,7 +115,7 @@ const TransactionsPage = () => {
               inputClassName="mr-[5px]"
               name="settings_One"
               id="settings_One"
-              shape="square"
+              shape="round"
             ></CheckBox>
           </div>
         ),
@@ -191,6 +191,7 @@ const TransactionsPage = () => {
             >
               Under 60
             </Text>
+            {info?.getValue() === "Enhanced" &&
             <Button
               className="cursor-pointer font-medium min-w-[68px] my-1.5 text-[10px] text-center"
               shape="round"
@@ -200,6 +201,29 @@ const TransactionsPage = () => {
             >
               {info?.getValue()}
             </Button>
+          }
+          {info?.getValue() === "Enhanced Plus" &&
+            <Button
+              className="cursor-pointer font-medium min-w-[68px] my-1.5 text-[10px] text-center"
+              shape="round"
+              color="indigo_50_01"
+              size="sm"
+              variant="fill"
+            >
+              {info?.getValue()}
+            </Button>
+          }
+          {info?.getValue() === "Ultimate" &&
+            <Button
+              className="cursor-pointer font-medium min-w-[68px] my-1.5 text-[10px] text-center"
+              shape="round"
+              color="orange_50"
+              size="sm"
+              variant="fill"
+            >
+              {info?.getValue()}
+            </Button>
+          }
           </div>
         ),
         header: (info) => (
@@ -278,16 +302,16 @@ const TransactionsPage = () => {
         <div className="bg-white-A700 flex flex-col gap-7 items-start justify-start max-w-[1440px] p-8 sm:px-5 w-full">
           <div className="flex flex-col gap-[13px] items-start justify-start max-w-[1376px] mx-auto md:px-5 w-full">
             <Text
-              className="sm:text-2xl md:text-[26px] text-[28px] text-indigo-800 w-full"
+              className="sm:text-2xl md:text-[26px] text-[28px] text-indigo-800 w-full uppercase"
               size="txtMontserratBold28"
             >
-              GLICO Sunkwa Health Plan
+              Transactions
             </Text>
             <Text
               className="text-blue_gray-300 text-sm tracking-[0.50px] w-full"
               size="txtMontserratSemiBold14"
             >
-              Policy Management System
+              Transactions Overview
             </Text>
           </div>
         </div>     
@@ -341,18 +365,16 @@ const TransactionsPage = () => {
                   </Text>
                 </div>
               </div>
-              <div className="flex flex-row items-start justify-between w-full">
+              <div className="flex flex-row items-end justify-between w-full">
                 <Text
-                  className="text-blue_gray-400 text-sm tracking-[0.50px] w-auto"
+                  className="text-blue_gray-400 text-xs tracking-[0.50px] w-auto flex items-end"
                   size="txtMontserratMedium14"
                 >
-                  4952 last month
-                </Text>
-                <Button
-                  className="cursor-pointer flex items-center justify-center min-w-[59px] px-1"
+                  <Button
+                  className="cursor-pointer flex items-center justify-center min-w-[59px] px-1 mr-1"
                   leftIcon={
                     <Img
-                      className="h-5 mr-1"
+                      className="h-4 mr-1"
                       src="images/img_arrowleft.svg"
                       alt="arrow_left"
                     />
@@ -361,10 +383,11 @@ const TransactionsPage = () => {
                   color="green_50"
                   variant="fill"
                 >
-                  <div className="!text-green-800 font-semibold text-right text-sm tracking-[0.50px]">
+                  <div className="!text-green-800 font-semibold text-right text-xs tracking-[0.50px]">
                     12%
                   </div>
-                </Button>
+                </Button> last month
+                </Text>
               </div>
             </div>
           </div>
@@ -410,34 +433,33 @@ const TransactionsPage = () => {
                     className="md:text-3xl sm:text-[28px] text-[32px] text-indigo-800 tracking-[0.50px] uppercase w-auto"
                     size="txtMontserratBold32Indigo800"
                   >
-                    20,0115
+                    3,001
                   </Text>
                 </div>
               </div>
               <div className="flex flex-row items-start justify-between w-full">
-                <Text
-                  className="text-blue_gray-400 text-sm tracking-[0.50px] w-auto"
+              <Text
+                  className="text-blue_gray-400 text-xs tracking-[0.50px] w-auto flex items-end"
                   size="txtMontserratMedium14"
                 >
-                  4952 last month
-                </Text>
-                <Button
-                  className="cursor-pointer flex items-center justify-center min-w-[59px] px-1"
+                  <Button
+                  className="cursor-pointer flex items-center justify-center min-w-[59px] px-1 mr-1"
                   leftIcon={
                     <Img
-                      className="h-5 mr-1"
-                      src="images/img_arrowright.svg"
-                      alt="arrow_right"
+                      className="h-4 mr-1"
+                      src="images/img_arrowleft.svg"
+                      alt="arrow_left"
                     />
                   }
                   shape="round"
-                  color="deep_orange_50"
+                  color="green_50"
                   variant="fill"
                 >
-                  <div className="font-semibold text-right text-sm tracking-[0.50px]">
-                    15%
+                  <div className="!text-green-800 font-semibold text-right text-xs tracking-[0.50px]">
+                    12%
                   </div>
-                </Button>
+                </Button> last month
+                </Text>
               </div>
             </div>
           </div>
@@ -447,7 +469,7 @@ const TransactionsPage = () => {
                 className="flex-1 text-[15px] text-blue_gray-400 tracking-[0.50px] w-auto"
                 size="txtMontserratSemiBold15"
               >
-                60& Above
+                60 & Above
               </Text>
               <SelectBox
                 className="border border-blue_gray-50 border-solid sm:flex-1 font-medium text-[15px] text-left tracking-[0.15px] w-[22%] sm:w-full"
@@ -488,29 +510,28 @@ const TransactionsPage = () => {
                 </div>
               </div>
               <div className="flex flex-row items-start justify-between w-full">
-                <Text
-                  className="text-blue_gray-400 text-sm tracking-[0.50px] w-auto"
+              <Text
+                  className="text-blue_gray-400 text-xs tracking-[0.50px] w-auto flex items-end"
                   size="txtMontserratMedium14"
                 >
-                  4952 last month
-                </Text>
-                <Button
-                  className="cursor-pointer flex items-center justify-center min-w-[59px] px-1"
+                  <Button
+                  className="cursor-pointer flex items-center justify-center min-w-[59px] px-1 mr-1"
                   leftIcon={
                     <Img
-                      className="h-5 mr-1"
-                      src="images/img_arrowleft.svg"
+                      className="h-4 mr-1"
+                      src="images/img_arrowright.svg"
                       alt="arrow_left"
                     />
                   }
                   shape="round"
-                  color="green_50"
+                  color="deep_orange_50"
                   variant="fill"
                 >
-                  <div className="!text-green-800 font-semibold text-right text-sm tracking-[0.50px]">
+                  <div className="!text-orange-800 font-semibold text-right text-xs tracking-[0.50px]">
                     12%
                   </div>
-                </Button>
+                </Button> last month
+                </Text>
               </div>
             </div>
           </div>
@@ -520,7 +541,7 @@ const TransactionsPage = () => {
             <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-full">
               <Input
                 name="frame361_One"
-                placeholder="Search..."
+                placeholder="Search transactions..."
                 className="font-semibold p-0 placeholder:text-blue_gray-300 text-[15px] text-left tracking-[0.50px] w-full"
                 wrapClassName="border border-gray-300 border-solid md:flex-1 rounded-lg md:w-full"
                 color="gray_100"
